@@ -32,6 +32,7 @@ public func xbArchive(
     projectArg,
     "-scheme", scheme,
     "-sdk", platform.sdk,
+    "-enableThreadSanitizer", "YES", // ThreadSanitizer
     "-archivePath", path,
     excludedArchsArg,
     platform == .Catalyst ? "-destination 'platform=macOS,variant=Mac Catalyst'" : "",
